@@ -54,7 +54,7 @@ export default class Grid extends Component {
     }
 
     measureCell(rowId, cellId, x, y, w, h) {
-        this.rowHeights[rowId] = Math.max(h, this.rowHeights[rowId]||0);
+        this.rowHeights[rowId] = Math.max(h || 0, this.rowHeights[rowId]||0);
         this.updateIfCellIsLast(rowId, cellId);
     }
 
